@@ -61,18 +61,33 @@ def descifradoCesarAlfabetoIngles(cadena):
         resultado += chr(ordenClaro)
     return resultado
 
-def cifradoCesar(cadena):
-    """Cifrado Cesar con desplazamiento +3, cualquier caracter"""
+def cifradoCesar(cadena, desp):
+    """
+    Cifrado Cesar con desplazamiento +desp, cualquier caracter ACII
+    cadena : str
+    desp   : int
+    """
     # TODO
     resultado = ''
     for c in cadena:
-        orden
-    return
+        ordenCifrado = (ord(c) + desp) % 127
+        resultado += chr(ordenCifrado)
+    return resultado
 
-def descifradoCesar(cadena):
-    """Cifrado Cesar con desplazamiento +3, cualquier caracter"""
-    # TODO
-    return 
+def descifradoCesar(cadena, desp):
+    """
+    Descifrado Cesar con desplazamiento +desp, cualquier caracter
+    cadena : str
+    desp   : int
+    """
+    resultado = ''
+    for c in cadena:
+        ordenCifrado = ((ord(c) + 127) - desp) % 127
+        resultado += chr(ordenCifrado)
+    return resultado
+
+
+############ PRUEBAS ##############
 
 if __name__ == "__main__":
     # a) 
@@ -90,3 +105,11 @@ if __name__ == "__main__":
     print("Cifrado: " + cifrado2)
     claro2 = descifradoCesarAlfabetoIngles(cifrado2)
     print("Descifrado: " + claro2)
+
+    # c) Cesar generalizado
+    mensaje3 = "Mensaje! Secreto! (Secret message...)"
+    print("Mensaje: " + mensaje3)
+    cifrado3 = cifradoCesar(mensaje3, 14)
+    print("Cifrado: " + cifrado3)
+    claro3 = descifradoCesar(cifrado3, 14)
+    print("Descifrado: " + claro3)
