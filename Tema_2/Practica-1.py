@@ -1,8 +1,7 @@
 # CRIPTOGRAFÍA CLÁSICA
 
-# DADO EL SIGUIENTE CÓDIGO:
 def cifradoCesarAlfabetoInglesMAY(cadena):
-    """Devuelve un cifrado Cesar tradicional (+3)"""
+    """Cifrado Cesar con desplazamiento +3, solo mayusculas"""
     # Definir la nueva cadena resultado
     resultado = ''
     # Realizar el "cifrado", sabiendo que A = 65, Z = 90, a = 97, z = 122
@@ -24,6 +23,7 @@ def cifradoCesarAlfabetoInglesMAY(cadena):
 
 # a) Implementar función de descifrado
 def descifradoCesarAlfabetoInglesMAY(cadena):
+    """Descifrado Cesar con desplazamiento +3, solo mayusculas"""
     resultado = '' 
     for c in cadena:
         ordenCifrado = ord(c)
@@ -34,8 +34,7 @@ def descifradoCesarAlfabetoInglesMAY(cadena):
     return resultado
 
 def cifradoCesarAlfabetoIngles(cadena):
-    """Devuelve un cifrado Cesar tradicional (+3)"""
-    # Definir la nueva cadena resultado
+    """Cifrado Cesar con desplazamiento +3, solo letras"""
     resultado = ''
     i = 0
     while i < len(cadena):
@@ -50,6 +49,7 @@ def cifradoCesarAlfabetoIngles(cadena):
     return resultado
 
 def descifradoCesarAlfabetoIngles(cadena):
+    """Descifrado Cesar con desplazamiento +3, solo letras"""
     resultado = '' 
     for c in cadena:
         ordenCifrado = ord(c)
@@ -61,8 +61,18 @@ def descifradoCesarAlfabetoIngles(cadena):
         resultado += chr(ordenClaro)
     return resultado
 
+def cifradoCesar(cadena):
+    """Cifrado Cesar con desplazamiento +3, cualquier caracter"""
+    # TODO
+    resultado = ''
+    for c in cadena:
+        orden
+    return
 
-
+def descifradoCesar(cadena):
+    """Cifrado Cesar con desplazamiento +3, cualquier caracter"""
+    # TODO
+    return 
 
 if __name__ == "__main__":
     # a) 
